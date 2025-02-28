@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form mehtod="post" action="FormTest.php">
+    <a
+        href="https://code.visualstudio.com/docs/supporting/faq#_installation-appears-to-be-corrupt-unsupported">这是一个a元素</a>
+    <!-- 这里设置了多个表单属性 -->
+    <form mehtod="post" action="FormTest.php" target="_blank" method="post" autocomplete="on">
         <!-- 使用fieldset将多个输入绑定在一个视图窗口中 -->
         <fieldset>
             <legend>Personal information:</legend>
@@ -15,7 +20,122 @@
             Last name:<br>
             <input type="text" name="lastname" value="Mouse"><br><br>
             <input type="submit" value="Submit">
+            <br />
+
+            <!-- textarea -->
+            <textarea name="message" rows="5" cols="50">The cat was playing in the garden.</textarea>
+
+            <!-- button -->
+            <br />
+            <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+
+            <br />
+            <!-- 下拉列表的实现 -->
+            <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
         </fieldset>
     </form>
+    <!-- datalist -->
+    <br />
+    <form action="action_page.php">
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </form>
+    <form>
+        <legend>Log in:</legend>
+        User name:<br>
+        <input type="text" name="username">
+        <br>
+        User password:<br>
+        <input type="password" name="psw">
+    </form>
+
+    <!-- 单选按钮 -->
+    <form>
+        <input type="radio" name="sex" value="male" checked /> Male<br />
+        <input type="radio" name="sex" value="female" /> Female <br />
+    </form>
+
+    <!-- 复选框-->
+    <form>
+        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+        <input type="checkbox" name="vehicle2" value="Car"> I have a Car<br>
+        <input type="checkbox" name="vehicle3" value="Bus"> I have a Bus<br>
+        <input type="checkbox" name="vehicle4" value="Train"> I have a Train<br>
+    </form>
+    <!-- 定义数字输入，可以限制最小值和最大值 -->
+    <form>
+        Age:
+        <input type="number" name="quantity" min="1" max="100"><br />
+        Quantity:
+        <input type="number" name="points" min="0" max="100" step="10" value="30"> <br />
+        BirthDay:
+        <input type="date" name="bday" min="1990-01-01" max="2018-12-31"><br />
+        Color:
+        <input type"color" name="favcolor" value="#ff0000"><br />
+        <!-- 定义一个滑动控件，使用滑动作为输入 -->
+        Range:
+        <input type="range" name="points" min="0" max="10"> <br />
+        <!-- 输入类型为month-->
+        BirthDay:
+        <input type="month" name="bday" min="1990-01" max="2018-12"><br />
+        Week:
+        <input type="week" name="week_year" min="1990-W01" max="2018-W52"><br />
+        Time:
+        <input type="time" name="time" min="00:00" max="23:59"><br />
+        Datetime:
+        <input type="datetime-local" name="datetime"><br />
+        Email:
+        <input type="email" name="email"><br />
+        SearchWord:
+        <input type="search" name="search"><br />
+        Telephone:
+        <input type="tel" name="tel"><br />
+        URL:
+        <input type="url" name="url"><br />
+    </form>
+
+    <!-- 这里展示input元素的属性 -->
+    <!-- value设置默认值-->
+    <input type="text" name="firstname" value="Mickey" size="40" maxlength="50"
+        placeholder="Enter your name here" /><br />
+    Readonly设置后不可修改:
+    <input type="text" name="firstname" value="Bill" readonly /><br />
+    <!-- 不可编辑的输入框-->
+    名字不可被编辑(disabled):
+    <input type="text" name="firstname" value="Bill" disabled /> <br />
+    设置输入字符的宽度为6个字符:
+    <input type="text" name="Password" size="10" value="000000" maxlength="6" /><br />
+    页面加载时自动获得焦点, 直接在输入框中输入:
+    <input type="text" name="fname" autofocus /><br />
+
+
+    设置输入的预定义选项:
+    <input type="text" name="browser" list="browsers" value="Internet surfing tool" />
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    Country Code:
+    <input type="text" name="country_code" pattern="[0-9]{3}" value="+86" size="3" maxlength="3" /><br />
+
+    placehold属性设置输入框的提示信息:
+    <input type="text" name="country" placeholder="请输入国家名称:" /><br />
 </body>
+
 </html>
