@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="100" style="border:1px solid #000000;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas");
+        <!-- 创建context对象 -->
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 100, 100);
+
+        ctx.fillStyle = "#FFFF00";
+        ctx.fillRect(100, 0, 200, 100);
+
+        ctx.fillStyle = "#FF00FF";
+        ctx.fillRect(200, 0, 300, 100);
+    </script>
+</body>
+
+</html>

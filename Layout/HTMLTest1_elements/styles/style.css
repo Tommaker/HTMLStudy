@@ -1,0 +1,30 @@
+p{
+    color:red;
+    font-size: 20px;
+}
+
+li {
+    color: rgb(29, 14, 233);
+    font-size: 20px;
+}
+
+.main-page-content h1 a:focus, 
+.main-page-content h1 a:hover{
+    text-decoration-line: underline;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+
+.underline-hover {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    /* 预留下划线空间 */
+    transition: border-color 0.5;
+}
+
+.underline-hover:hover {
+    border-bottom: 2px solid #3498db;
+    /* 悬停时显示下划线 */
+}
